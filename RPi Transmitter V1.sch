@@ -1,0 +1,390 @@
+EESchema Schematic File Version 4
+LIBS:RPi Hat Transmitter V1-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "15 nov 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x13_Odd_Even P1
+U 1 1 50A55ABA
+P 2400 1800
+F 0 "P1" H 2400 2500 60  0000 C CNN
+F 1 "CONN_13X2" V 2450 1850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical" H 2200 1100 30  0001 C CNN
+F 3 "" H 2400 1800 60  0001 C CNN
+	1    2400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 50A55B18
+P 2100 1050
+F 0 "#PWR01" H 2100 900 50  0001 C CNN
+F 1 "+3.3V" H 2100 1190 50  0000 C CNN
+F 2 "" H 2100 1050 50  0000 C CNN
+F 3 "" H 2100 1050 50  0000 C CNN
+	1    2100 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1050 2100 1200
+Wire Wire Line
+	2100 1200 2200 1200
+$Comp
+L power:+5V #PWR02
+U 1 1 50A55B2E
+P 2800 1050
+F 0 "#PWR02" H 2800 900 50  0001 C CNN
+F 1 "+5V" H 2800 1190 50  0000 C CNN
+F 2 "" H 2800 1050 50  0000 C CNN
+F 3 "" H 2800 1050 50  0000 C CNN
+	1    2800 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1050 2800 1200
+Wire Wire Line
+	2800 1200 2700 1200
+NoConn ~ 2700 1300
+Wire Wire Line
+	2200 1300 1450 1300
+Wire Wire Line
+	2200 1400 1450 1400
+Text Label 1450 1300 0    60   ~ 0
+GPIO0(SDA)
+Text Label 1450 1400 0    60   ~ 0
+GPIO1(SCL)
+Wire Wire Line
+	2200 1500 1450 1500
+Text Label 1450 1500 0    60   ~ 0
+GPIO4
+NoConn ~ 2200 1600
+Wire Wire Line
+	2200 1700 1450 1700
+Wire Wire Line
+	2200 1800 1450 1800
+Wire Wire Line
+	2200 1900 1450 1900
+Text Label 1450 1700 0    60   ~ 0
+GPIO17
+Text Label 1450 1800 0    60   ~ 0
+GPIO21
+Text Label 1450 1900 0    60   ~ 0
+GPIO22
+NoConn ~ 2200 2000
+Wire Wire Line
+	2200 2100 1450 2100
+Wire Wire Line
+	2200 2200 1450 2200
+Wire Wire Line
+	2200 2300 1450 2300
+Text Label 1450 2100 0    60   ~ 0
+GPIO10(MOSI)
+Text Label 1450 2200 0    60   ~ 0
+GPIO9(MISO)
+Text Label 1450 2300 0    60   ~ 0
+GPIO11(SCLK)
+NoConn ~ 2200 2400
+$Comp
+L power:GND #PWR03
+U 1 1 50A55C3F
+P 3650 2500
+F 0 "#PWR03" H 3650 2250 50  0001 C CNN
+F 1 "GND" H 3650 2350 50  0000 C CNN
+F 2 "" H 3650 2500 50  0000 C CNN
+F 3 "" H 3650 2500 50  0000 C CNN
+	1    3650 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1500 3400 1500
+Wire Wire Line
+	2700 1600 3400 1600
+Text Label 3400 1500 2    60   ~ 0
+TXD
+Text Label 3400 1600 2    60   ~ 0
+RXD
+Wire Wire Line
+	2700 1700 3400 1700
+Text Label 3400 1700 2    60   ~ 0
+GPIO18
+NoConn ~ 2700 1800
+Wire Wire Line
+	2700 1900 3400 1900
+Wire Wire Line
+	2700 2000 3400 2000
+Text Label 3400 1900 2    60   ~ 0
+GPIO23
+Text Label 3400 2000 2    60   ~ 0
+GPIO24
+NoConn ~ 2700 2100
+Wire Wire Line
+	2700 2200 3400 2200
+Text Label 3400 2200 2    60   ~ 0
+GPIO25
+Wire Wire Line
+	2700 2300 3400 2300
+Wire Wire Line
+	2700 2400 3400 2400
+Text Label 3400 2300 2    60   ~ 0
+GPIO8(CE0)
+Text Label 3400 2400 2    60   ~ 0
+GPIO7(CE1)
+$Comp
+L SamacSys_Parts:HMC241AQS16E IC1
+U 1 1 5D6AAA88
+P 7000 1500
+F 0 "IC1" H 7600 1765 50  0000 C CNN
+F 1 "HMC241AQS16E" H 7600 1674 50  0000 C CNN
+F 2 "SOP64P600X175-16N" H 8050 1600 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/HMC241AQS16E.pdf" H 8050 1500 50  0001 L CNN
+F 4 "RF Switch ICs GaAs MMIC SP4T Non-Refl Swtch" H 8050 1400 50  0001 L CNN "Description"
+F 5 "1.75" H 8050 1300 50  0001 L CNN "Height"
+F 6 "584-HMC241AQS16E" H 8050 1200 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-HMC241AQS16E" H 8050 1100 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 8050 1000 50  0001 L CNN "Manufacturer_Name"
+F 9 "HMC241AQS16E" H 8050 900 50  0001 L CNN "Manufacturer_Part_Number"
+	1    7000 1500
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 1500 0    50   Input ~ 0
+GPIO4
+Wire Wire Line
+	3650 2500 3650 1400
+Wire Wire Line
+	2700 1400 3650 1400
+Wire Wire Line
+	7000 1500 6800 1500
+Wire Wire Line
+	7000 1600 6350 1600
+Wire Wire Line
+	6350 1600 6350 1700
+Wire Wire Line
+	6350 1700 7000 1700
+Wire Wire Line
+	8200 1500 8800 1500
+Wire Wire Line
+	8800 1500 8800 1600
+Wire Wire Line
+	8800 1600 8200 1600
+Wire Wire Line
+	8200 1800 8800 1800
+Wire Wire Line
+	8800 1800 8800 2000
+Wire Wire Line
+	8800 2000 8200 2000
+Wire Wire Line
+	7000 1900 6350 1900
+Wire Wire Line
+	6350 1900 6350 2100
+Wire Wire Line
+	6350 2100 7000 2100
+Wire Wire Line
+	6350 1700 6350 1900
+Connection ~ 6350 1700
+Connection ~ 6350 1900
+Wire Wire Line
+	8800 1600 8800 1800
+Connection ~ 8800 1600
+Connection ~ 8800 1800
+Wire Wire Line
+	7000 1800 6750 1800
+Wire Wire Line
+	8200 1700 8450 1700
+Wire Wire Line
+	8200 1900 8450 1900
+Wire Wire Line
+	7000 2000 6750 2000
+$Comp
+L power:GND #PWR0101
+U 1 1 5D6B539A
+P 6350 2350
+F 0 "#PWR0101" H 6350 2100 50  0001 C CNN
+F 1 "GND" H 6355 2177 50  0000 C CNN
+F 2 "" H 6350 2350 50  0001 C CNN
+F 3 "" H 6350 2350 50  0001 C CNN
+	1    6350 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2100 6350 2350
+Connection ~ 6350 2100
+$Comp
+L power:GND #PWR0102
+U 1 1 5D6B5FCD
+P 8800 2350
+F 0 "#PWR0102" H 8800 2100 50  0001 C CNN
+F 1 "GND" H 8805 2177 50  0000 C CNN
+F 2 "" H 8800 2350 50  0001 C CNN
+F 3 "" H 8800 2350 50  0001 C CNN
+	1    8800 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 2000 8800 2350
+Connection ~ 8800 2000
+$Comp
+L power:+5V #PWR0103
+U 1 1 5D6B7AEE
+P 6600 2300
+F 0 "#PWR0103" H 6600 2150 50  0001 C CNN
+F 1 "+5V" H 6615 2473 50  0000 C CNN
+F 2 "" H 6600 2300 50  0001 C CNN
+F 3 "" H 6600 2300 50  0001 C CNN
+	1    6600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2200 6850 2200
+Wire Wire Line
+	6850 2200 6850 2400
+Wire Wire Line
+	6850 2400 6600 2400
+Wire Wire Line
+	6600 2400 6600 2300
+Wire Wire Line
+	8200 2100 8450 2100
+Wire Wire Line
+	8200 2200 8450 2200
+Text GLabel 8450 2100 2    50   Input ~ 0
+GPIO17
+Text GLabel 8450 2200 2    50   Input ~ 0
+GPIO22
+$Comp
+L SamacSys_Parts:HMC241AQS16E IC2
+U 1 1 5D6C314E
+P 7000 4250
+F 0 "IC2" H 7600 4515 50  0000 C CNN
+F 1 "HMC241AQS16E" H 7600 4424 50  0000 C CNN
+F 2 "SOP64P600X175-16N" H 8050 4350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/HMC241AQS16E.pdf" H 8050 4250 50  0001 L CNN
+F 4 "RF Switch ICs GaAs MMIC SP4T Non-Refl Swtch" H 8050 4150 50  0001 L CNN "Description"
+F 5 "1.75" H 8050 4050 50  0001 L CNN "Height"
+F 6 "584-HMC241AQS16E" H 8050 3950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-HMC241AQS16E" H 8050 3850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 8050 3750 50  0001 L CNN "Manufacturer_Name"
+F 9 "HMC241AQS16E" H 8050 3650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    7000 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 4250 0    50   Input ~ 0
+GPIO4
+Wire Wire Line
+	7000 4250 6800 4250
+Wire Wire Line
+	7000 4350 6350 4350
+Wire Wire Line
+	6350 4350 6350 4450
+Wire Wire Line
+	6350 4450 7000 4450
+Wire Wire Line
+	8200 4250 8800 4250
+Wire Wire Line
+	8800 4250 8800 4350
+Wire Wire Line
+	8800 4350 8200 4350
+Wire Wire Line
+	8200 4550 8800 4550
+Wire Wire Line
+	8800 4550 8800 4750
+Wire Wire Line
+	8800 4750 8200 4750
+Wire Wire Line
+	7000 4650 6350 4650
+Wire Wire Line
+	6350 4650 6350 4850
+Wire Wire Line
+	6350 4850 7000 4850
+Wire Wire Line
+	6350 4450 6350 4650
+Connection ~ 6350 4450
+Connection ~ 6350 4650
+Wire Wire Line
+	8800 4350 8800 4550
+Connection ~ 8800 4350
+Connection ~ 8800 4550
+Wire Wire Line
+	7000 4550 6750 4550
+Wire Wire Line
+	8200 4450 8450 4450
+Wire Wire Line
+	8200 4650 8450 4650
+Wire Wire Line
+	7000 4750 6750 4750
+$Comp
+L power:GND #PWR0104
+U 1 1 5D6C316C
+P 6350 5100
+F 0 "#PWR0104" H 6350 4850 50  0001 C CNN
+F 1 "GND" H 6355 4927 50  0000 C CNN
+F 2 "" H 6350 5100 50  0001 C CNN
+F 3 "" H 6350 5100 50  0001 C CNN
+	1    6350 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4850 6350 5100
+Connection ~ 6350 4850
+$Comp
+L power:GND #PWR0105
+U 1 1 5D6C3174
+P 8800 5100
+F 0 "#PWR0105" H 8800 4850 50  0001 C CNN
+F 1 "GND" H 8805 4927 50  0000 C CNN
+F 2 "" H 8800 5100 50  0001 C CNN
+F 3 "" H 8800 5100 50  0001 C CNN
+	1    8800 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4750 8800 5100
+Connection ~ 8800 4750
+$Comp
+L power:+5V #PWR0106
+U 1 1 5D6C317C
+P 6600 5050
+F 0 "#PWR0106" H 6600 4900 50  0001 C CNN
+F 1 "+5V" H 6615 5223 50  0000 C CNN
+F 2 "" H 6600 5050 50  0001 C CNN
+F 3 "" H 6600 5050 50  0001 C CNN
+	1    6600 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4950 6850 4950
+Wire Wire Line
+	6850 4950 6850 5150
+Wire Wire Line
+	6850 5150 6600 5150
+Wire Wire Line
+	6600 5150 6600 5050
+Wire Wire Line
+	8200 4850 8450 4850
+Wire Wire Line
+	8200 4950 8450 4950
+Text GLabel 8450 4850 2    50   Input ~ 0
+GPIO17
+Text GLabel 8450 4950 2    50   Input ~ 0
+GPIO22
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 5D6BB1CB
+P 2600 4450
+F 0 "J1" H 2600 5931 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 2600 5840 50  0000 C CNN
+F 2 "" H 2600 4450 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 2600 4450 50  0001 C CNN
+	1    2600 4450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
