@@ -123,16 +123,6 @@ Text Notes 1225 950  0    100  ~ 0
 This is based on the official Raspberry Pi spec to be able to call an extension board a HAT.\nhttps://github.com/raspberrypi/hats/blob/master/designguide.md
 Wire Wire Line
 	2100 1875 1200 1875
-Wire Wire Line
-	2100 2075 1200 2075
-Wire Wire Line
-	2100 2175 1200 2175
-Text GLabel 1200 1875 0    50   Input ~ 0
-GPIO4
-Text GLabel 1200 2075 0    50   Input ~ 0
-GPIO17
-Text GLabel 1200 2175 0    50   Input ~ 0
-GPIO27
 $Comp
 L Device:C C1
 U 1 1 5D6E27DF
@@ -468,7 +458,7 @@ Text GLabel 1125 7075 0    50   Input Italic 0
 RF2_OUT
 Text GLabel 1275 9850 0    50   Input Italic 0
 RF4_OUT
-Text GLabel 4000 9850 2    50   Input Italic 0
+Text GLabel 3300 9850 2    50   Input Italic 0
 RF4_IN
 Wire Notes Line
 	10925 475  10925 5425
@@ -750,10 +740,6 @@ F 3 "" H 7750 10225 50  0001 C CNN
 	1    7750 10225
 	1    0    0    -1  
 $EndComp
-Text GLabel 1200 2275 0    50   Input ~ 0
-GPIO22
-Wire Wire Line
-	2100 2275 1200 2275
 $Comp
 L Device:Jumper JP1
 U 1 1 5D7164F6
@@ -886,32 +872,32 @@ Wire Wire Line
 $Comp
 L vk_custom_kicad:SMA- CON4
 U 1 1 5DD39EB4
-P 3350 9850
-F 0 "CON4" V 3390 9880 50  0000 L CNN
-F 1 "Sig_In" V 3299 9880 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132291-12_Vertical" V 3350 9650 50  0001 C CNN
-F 3 "JOHNSON COMPONENTS" H 3500 9700 50  0001 L BNN
-F 4 "91B6105" H 3750 9600 50  0001 L BNN "Field4"
-F 5 "1339835" H 3750 9600 50  0001 L BNN "Field5"
-F 6 "142-0701-871" H 3500 9700 50  0001 L BNN "Field6"
-	1    3350 9850
+P 2650 9850
+F 0 "CON4" V 2690 9880 50  0000 L CNN
+F 1 "Sig_In" V 2599 9880 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132291-12_Vertical" V 2650 9650 50  0001 C CNN
+F 3 "JOHNSON COMPONENTS" H 2800 9700 50  0001 L BNN
+F 4 "91B6105" H 3050 9600 50  0001 L BNN "Field4"
+F 5 "1339835" H 3050 9600 50  0001 L BNN "Field5"
+F 6 "142-0701-871" H 2800 9700 50  0001 L BNN "Field6"
+	1    2650 9850
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 5DD39EBA
-P 3700 10025
-F 0 "#PWR06" H 3700 9775 50  0001 C CNN
-F 1 "GND" H 3705 9852 50  0000 C CNN
-F 2 "" H 3700 10025 50  0001 C CNN
-F 3 "" H 3700 10025 50  0001 C CNN
-	1    3700 10025
+P 3000 10025
+F 0 "#PWR06" H 3000 9775 50  0001 C CNN
+F 1 "GND" H 3005 9852 50  0000 C CNN
+F 2 "" H 3000 10025 50  0001 C CNN
+F 3 "" H 3000 10025 50  0001 C CNN
+	1    3000 10025
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 9950 3700 9950
+	2950 9950 3000 9950
 Wire Wire Line
-	3700 9950 3700 10025
+	3000 9950 3000 10025
 $Comp
 L Device:R R10
 U 1 1 5DDF6B6B
@@ -1065,7 +1051,7 @@ Wire Wire Line
 Wire Wire Line
 	1275 9850 1575 9850
 Wire Wire Line
-	3650 9850 4000 9850
+	2950 9850 3300 9850
 Wire Wire Line
 	7650 3075 8000 3075
 Wire Wire Line
@@ -1221,9 +1207,9 @@ Text GLabel 12625 2875 0    50   Input Italic 0
 RF3_OUT
 Text GLabel 12625 2975 0    50   Input Italic 0
 RF4_OUT
-Text GLabel 12625 3125 0    50   Input ~ 0
+Text GLabel 12550 3600 0    50   Input ~ 0
 RF_IN_SWITCH
-Text GLabel 14775 2675 2    50   Input ~ 0
+Text GLabel 15375 2675 2    50   Input ~ 0
 RF_ANT_OUT
 Text GLabel 14775 2825 2    50   Input Italic 0
 RF1_IN
@@ -1233,4 +1219,61 @@ Text GLabel 14775 3025 2    50   Input Italic 0
 RF3_IN
 Text GLabel 14775 3125 2    50   Input Italic 0
 RF4_IN
+NoConn ~ 2100 2075
+NoConn ~ 2100 2175
+NoConn ~ 2100 2275
+$Comp
+L RF_Filter:LFCN-180 FL4
+U 1 1 5DA66447
+P 4800 9850
+F 0 "FL4" H 4800 10317 50  0000 C CNN
+F 1 "LFCN-180" H 4800 10226 50  0000 C CNN
+F 2 "Filter:Filter_Mini-Circuits_FV1206" H 4800 10350 50  0001 C CNN
+F 3 "https://www.minicircuits.com/pdfs/LFCN-180+.pdf" H 4800 9850 50  0001 C CNN
+	1    4800 9850
+	1    0    0    -1  
+$EndComp
+Text GLabel 5200 9850 2    50   Input Italic 0
+RF4_IN
+Text GLabel 4400 9850 0    50   Input Italic 0
+RF4_OUT
+$Comp
+L power:GND #PWR0101
+U 1 1 5DA8745E
+P 4800 10250
+F 0 "#PWR0101" H 4800 10000 50  0001 C CNN
+F 1 "GND" H 4805 10077 50  0000 C CNN
+F 2 "" H 4800 10250 50  0001 C CNN
+F 3 "" H 4800 10250 50  0001 C CNN
+	1    4800 10250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP2
+U 1 1 5DA89EAB
+P 12225 3125
+F 0 "JP2" H 12225 3389 50  0000 C CNN
+F 1 "Jumper" H 12225 3298 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12225 3125 50  0001 C CNN
+F 3 "~" H 12225 3125 50  0001 C CNN
+	1    12225 3125
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Jumper JP3
+U 1 1 5DAA0E83
+P 15075 2675
+F 0 "JP3" H 15075 2939 50  0000 C CNN
+F 1 "Jumper" H 15075 2848 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 15075 2675 50  0001 C CNN
+F 3 "~" H 15075 2675 50  0001 C CNN
+	1    15075 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12525 3125 12625 3125
+Text GLabel 11925 3125 0    50   Input ~ 0
+RF_RPI
+Text GLabel 1200 1875 0    50   Input ~ 0
+RF_RPI
 $EndSCHEMATC
